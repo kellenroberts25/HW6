@@ -6,7 +6,7 @@ Partial Class RecipeDetails
 
         Dim deletedrecipe As String = e.Values("Recipe_Name").ToString()
 
-        lblDeletedRecipe.text() = deletedrecipe & "has been deleted from the database!"
+        lblDeletedRecipe.Text() = deletedrecipe & " has been deleted from the database!"
 
         Response.AddHeader("REFRESH", "3;URL=./ViewAllRecipes.aspx")
     End Sub
