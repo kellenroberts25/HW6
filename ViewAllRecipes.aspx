@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="ViewAllRecipes.aspx.vb" Inherits="_Default" %>
 
 <!DOCTYPE html>
 
@@ -39,19 +39,13 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
+        <asp:HyperLink ID="AddNewRecipe" runat="server" NavigateUrl="~/NewRecipe.aspx">Add New Recipe</asp:HyperLink>
         <br />
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="sql_HW6">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                 <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe" SortExpression="Recipe_Name" />
                 <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
-                <asp:BoundField DataField="Ingredient_1" HeaderText="Ingredient #1" SortExpression="Ingredient_1" />
-                <asp:BoundField DataField="Ingredient_2" HeaderText="Ingredient #2" SortExpression="Ingredient_2" />
-                <asp:BoundField DataField="Ingredient_3" HeaderText="Ingredient #3" SortExpression="Ingredient_3" />
-                <asp:BoundField DataField="Ingredient_4" HeaderText="Ingredient #4" SortExpression="Ingredient_4" />
-                <asp:BoundField DataField="Ingredient_5" HeaderText="Ingredient #5" SortExpression="Ingredient_5" />
-                <asp:BoundField DataField="Preperation" HeaderText="Preperation" SortExpression="Preperation" />
-                <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
+                <asp:HyperLinkField DataNavigateUrlFields="RecipeID" DataNavigateUrlFormatString="RecipeDetails.aspx?RecipeID={0}" Text="Select" />
             </Columns>
         </asp:GridView>
     
