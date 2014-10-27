@@ -45,7 +45,7 @@
         <br />
         <asp:Label ID="lbldeletedrecipe" runat="server"></asp:Label>
         <br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="RecipeID" DataSourceID="sql_RecipeDetails" Height="270px" Width="417px">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="RecipeID" DataSourceID="sql_RecipeDetails" Height="101px" Width="106px">
             <EditItemTemplate>
                             <table class="table">
                     <tr>
@@ -172,6 +172,9 @@
             </InsertItemTemplate>
             <ItemTemplate>
                 <table class="table">
+                    <th>
+                        Recipe Details
+                    </th>
                     <tr>
                         <td class="detailscells1">
                             Recipe:

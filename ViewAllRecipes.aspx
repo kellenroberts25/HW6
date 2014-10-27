@@ -42,6 +42,7 @@
         <br />
         <asp:HyperLink ID="AddNewRecipe" runat="server" NavigateUrl="~/NewRecipe.aspx">Add New Recipe</asp:HyperLink>
         <br />
+        <br />
         
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="RecipeID" DataSourceID="sql_HW6">
             <Columns>
