@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Wicked Easy Recipes</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -42,11 +43,11 @@
             </UpdateParameters>
         </asp:SqlDataSource>
         <br />
-        <asp:Label ID="lblDeletedRecipe" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="lbldeletedrecipe" runat="server"></asp:Label>
         <br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="RecipeID" DataSourceID="sql_RecipeDetails" Height="270px" Width="390px">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="RecipeID" DataSourceID="sql_RecipeDetails" Height="270px" Width="417px">
             <EditItemTemplate>
-                            <table>
+                            <table class="table">
                     <tr>
                         <td>
                             Recipe: 
@@ -170,75 +171,75 @@
 
             </InsertItemTemplate>
             <ItemTemplate>
-                <table>
+                <table class="table">
                     <tr>
-                        <td>
+                        <td class="detailscells1">
                             Recipe:
                         </td>
-                        <td>
+                        <td class="detailscells2">
                             <asp:Label ID="Recipe_NameLabel" runat="server" Text='<%# Bind("Recipe_Name") %>' />
                         </td>                
                     </tr>
                     <tr>
-                        <td>
+                        <td class="detailscells1">
                             Submitted By:
                         </td>
-                        <td>
+                        <td class="detailscells2">
                             <asp:Label ID="Submitted_ByLabel" runat="server" Text='<%# Bind("Submitted_By") %>' />
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="detailscells1">
                             Ingredient 1:
                         </td>
-                        <td>
+                        <td class="detailscells2">
                             <asp:Label ID="Ingredient_1Label" runat="server" Text='<%# Bind("Ingredient_1") %>' />
                         </td>
                     </tr>
                     <tr>
-                        <td>
+                        <td class="detailscells1">
                             Ingredient 2:
                         </td>
-                        <td>
+                        <td class="detailscells2">
                             <asp:Label ID="Ingredient_2Label" runat="server" Text='<%# Bind("Ingredient_2") %>' />
                         </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="detailscells1">
                         Ingredient 3:
                     </td>
-                    <td>
+                    <td class="detailscells2">
                         <asp:Label ID="Ingredient_3Label" runat="server" Text='<%# Bind("Ingredient_3") %>' />
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="detailscells1">
                          Ingredient 4:
                     </td>
-                    <td>
+                    <td class="detailscells2">
                         <asp:Label ID="Ingredient_4Label" runat="server" Text='<%# Bind("Ingredient_4") %>' />
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="detailscells1">
                         Ingredient 5:
                     </td>
-                    <td>
+                    <td class="detailscells2">
                         <asp:Label ID="Ingredient_5Label" runat="server" Text='<%# Bind("Ingredient_5") %>' />
                     </tr>
                     <tr>
-                        <td>
+                        <td class="detailscells1">
                             Preperation:
                         </td>
-                        <td>
+                        <td class="detailscells2">
                             <asp:Label ID="PreperationLabel" runat="server" Text='<%# Bind("Preperation") %>' />
                         </td>
                     </tr>
                 <tr>
-                    <td>
+                    <td class="detailscells1">
                         Notes:
                     </td>
-                    <td>
+                    <td class="detailscells2">
                         <asp:Label ID="NotesLabel" runat="server" Text='<%# Bind("Notes") %>' />
                     </td>
                 </tr>

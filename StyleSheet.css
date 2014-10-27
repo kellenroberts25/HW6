@@ -1,3 +1,46 @@
 ﻿body {
+    background-color:#D2B48C;
+    
 }
 
+.table {
+    border: 5px solid white;
+    border-radius:5px;
+    padding:5px;
+    color:#FFFFFF;
+    background-color:white;
+    margin: 100px;
+    width: 206px;
+}
+
+.select{
+    color:#696969;
+}
+
+.columns{
+    color:#696969;
+}
+td {
+    background-color:#F08080;
+}
+
+.detailsview {
+    border: 5px solid white;
+    border-radius:5px;
+    padding:5px;
+    margin:5px;
+    vertical-align:middle;
+    color:#FFFFFF;
+    background-color:white;
+    margin:100px;
+}
+
+.detailscells1 {
+    background-color:white;
+    color:#696969;
+    width:100px;
+}
+.detailscells2 {
+    background-color:white;
+    color:coral;
+}
