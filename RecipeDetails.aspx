@@ -6,12 +6,38 @@
 <head runat="server">
     <title>Wicked Easy Recipes</title>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <h2 style="text-align: center">Wicked Easy Recipes</h2>
+
+    </div>
+    <h4 style="text-align: center">Using 5 Ingredients or Less!</h4>
     <form id="form1" runat="server">
-    <div>
-    
-        <asp:SqlDataSource ID="sql_RecipeDetails" runat="server" ConnectionString="<%$ ConnectionStrings:dbo_karoberts_HW6 %>" DeleteCommand="DELETE FROM [karoberts_HW6] WHERE [RecipeID] = @RecipeID" InsertCommand="INSERT INTO [karoberts_HW6] ([Recipe_Name], [Submitted_By], [Ingredient_1], [Ingredient_2], [Ingredient_3], [Ingredient_4], [Ingredient_5], [Preperation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @Ingredient_1, @Ingredient_2, @Ingredient_3, @Ingredient_4, @Ingredient_5, @Preperation, @Notes)" SelectCommand="SELECT * FROM [karoberts_HW6] WHERE ([RecipeID] = @RecipeID)" UpdateCommand="UPDATE [karoberts_HW6] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_1] = @Ingredient_1, [Ingredient_2] = @Ingredient_2, [Ingredient_3] = @Ingredient_3, [Ingredient_4] = @Ingredient_4, [Ingredient_5] = @Ingredient_5, [Preperation] = @Preperation, [Notes] = @Notes WHERE [RecipeID] = @RecipeID">
+    <div class="auto-style1">
+        <div class="auto-style1">
+    <br /><a href="Default.aspx" style="color: #696969; text-align: center;">Home</a>&nbsp; |&nbsp; 
+        <a href="New_Recipe.aspx" style="color: #696969">New Recipe</a>&nbsp; |&nbsp; 
+        <a href="AboutUs.aspx" style="color: #696969">About Us</a>&nbsp; |&nbsp; 
+        <a href="ContactUs.aspx" style="color: #696969">Contact Us</a>
+        </div>
+        <div style="align-content:center;">
+        <asp:SqlDataSource ID="sql_RecipeDetails" runat="server" ConnectionString="<%$ 
+            ConnectionStrings:dbo_karoberts_HW6 %>" DeleteCommand="DELETE FROM [karoberts_HW6] WHERE 
+            [RecipeID] = @RecipeID" InsertCommand="INSERT INTO [karoberts_HW6] ([Recipe_Name], 
+            [Submitted_By], [Ingredient_1], [Ingredient_2], [Ingredient_3], [Ingredient_4], [Ingredient_5],
+             [Preperation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @Ingredient_1, @Ingredient_2, 
+            @Ingredient_3, @Ingredient_4, @Ingredient_5, @Preperation, @Notes)" SelectCommand="SELECT * 
+            FROM [karoberts_HW6] WHERE ([RecipeID] = @RecipeID)" UpdateCommand="UPDATE [karoberts_HW6] SET 
+            [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_1] = @Ingredient_1, 
+            [Ingredient_2] = @Ingredient_2, [Ingredient_3] = @Ingredient_3, [Ingredient_4] = @Ingredient_4, 
+            [Ingredient_5] = @Ingredient_5, [Preperation] = @Preperation, [Notes] = @Notes WHERE [RecipeID] 
+            = @RecipeID">
             <DeleteParameters>
                 <asp:Parameter Name="RecipeID" Type="Int32" />
             </DeleteParameters>
@@ -260,7 +286,7 @@
     
         <br />
         <br />
-    
+    </div>
     </div>
     </form>
 </body>

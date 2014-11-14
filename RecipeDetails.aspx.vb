@@ -7,13 +7,13 @@ Partial Class RecipeDetails
 
         lblDeletedRecipe.Text() = deletedrecipe & " has been deleted from the database!"
 
-        Response.AddHeader("REFRESH", "3;URL=./ViewAllRecipes.aspx")
+        Response.AddHeader("REFRESH", "3;URL=./Default.aspx")
     End Sub
 
 
 
 
     Protected Sub FormView1_ItemUpdated(sender As Object, e As FormViewUpdatedEventArgs) Handles FormView1.ItemUpdated
-        Response.Redirect("./ViewAllRecipes.aspx")
+        Response.Redirect("./Default.aspx")
     End Sub
 End Class

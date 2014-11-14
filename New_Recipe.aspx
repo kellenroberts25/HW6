@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="NewRecipe.aspx.vb" Inherits="Default2" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="New_Recipe.aspx.vb" Inherits="Default2" %>
 
 <!DOCTYPE html>
 
@@ -7,9 +7,19 @@
     <title>Wicked Easy Recipes</title>
     <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
 </head>
-<body>
+<body style="text-align: center">
+    <div class="header">
+        <h2>Wicked Easy Recipes</h2>
+
+    </div>
+    <h4>Using 5 Ingredients or Less!</h4>
     <form id="form1" runat="server">
-    <div>
+    <br /><a href="Default.aspx" style="color: #696969">Home</a>&nbsp; |&nbsp; 
+        <a href="New_Recipe.aspx" style="color: #696969">New Recipe</a>&nbsp; |&nbsp; 
+        <a href="AboutUs.aspx" style="color: #696969">About Us</a>&nbsp; |&nbsp; 
+        <a href="ContactUs.aspx" style="color: #696969">Contact Us</a>
+        
+        <div>
     
         <asp:SqlDataSource ID="sql_NewRecipe" runat="server" ConnectionString="<%$ ConnectionStrings:dbo_karoberts_HW6 %>" DeleteCommand="DELETE FROM [karoberts_HW6] WHERE [RecipeID] = @RecipeID" InsertCommand="INSERT INTO [karoberts_HW6] ([Recipe_Name], [Submitted_By], [Ingredient_1], [Ingredient_2], [Ingredient_3], [Ingredient_4], [Ingredient_5], [Preperation], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @Ingredient_1, @Ingredient_2, @Ingredient_3, @Ingredient_4, @Ingredient_5, @Preperation, @Notes)" SelectCommand="SELECT * FROM [karoberts_HW6]" UpdateCommand="UPDATE [karoberts_HW6] SET [Recipe_Name] = @Recipe_Name, [Submitted_By] = @Submitted_By, [Ingredient_1] = @Ingredient_1, [Ingredient_2] = @Ingredient_2, [Ingredient_3] = @Ingredient_3, [Ingredient_4] = @Ingredient_4, [Ingredient_5] = @Ingredient_5, [Preperation] = @Preperation, [Notes] = @Notes WHERE [RecipeID] = @RecipeID">
             <DeleteParameters>
